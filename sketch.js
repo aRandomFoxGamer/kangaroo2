@@ -87,8 +87,8 @@ function draw() {
     spawnShrubs();
     spawnObstacles();
 
-    kangaroo.isTouching(invisibleGround);
-    if(kangaroo.collided(obstaclesGroup)){
+    kangaroo.collide(invisibleGround);
+    if (kangaroo.isTouching(obstaclesGroup)) {
       collidedSound.play();
       gameState = END;
     }
